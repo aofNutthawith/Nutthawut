@@ -1,0 +1,219 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#f8fafc;
+color:#1e293b;
+line-height:1.7;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:center;
+gap:25px;
+padding:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+}
+
+nav a{
+text-decoration:none;
+color:#64748b;
+font-weight:500;
+}
+
+nav a:hover{
+color:#2563eb;
+}
+
+.wrapper{
+width:90%;
+max-width:1000px;
+margin:auto;
+padding:90px 0 60px;
+}
+
+.hero{
+text-align:center;
+margin-bottom:30px;   /* ลดจาก 60 → 30 */
+padding:70px 20px;   /* ลดความสูง hero */
+position:relative;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle,
+rgba(59,130,246,0.25),
+transparent 70%);
+top:-200px;
+left:40%;
+filter:blur(60px);
+animation:floatGlow2 25s ease-in-out infinite;
+z-index:-2;
+}
+
+@keyframes floatGlow2{
+0%{
+transform:translateY(0px) scale(1);
+}
+50%{
+transform:translateY(-40px) scale(1.1);
+}
+100%{
+transform:translateY(0px) scale(1);
+}
+}
+
+.profile-img{
+width:160px;
+height:160px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 0 40px rgba(37,99,235,0.35);
+}
+
+.hero h1{
+margin-top:20px;
+font-size:34px;
+}
+
+.counter{
+color:#2563eb;
+font-weight:600;
+margin-top:10px;
+}
+
+.btn{
+display:inline-block;
+padding:10px 20px;
+background:#1e293b;
+color:white;
+border-radius:8px;
+text-decoration:none;
+margin-top:20px;
+}
+
+.section{
+margin-top:50px;
+}
+
+.section h2{
+margin-bottom:20px;
+}
+
+
+.card{
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+will-change:transform;   
+background:white;
+padding:25px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+margin-bottom:20px;
+transition:all 0.3s ease;
+}
+
+.card:hover{
+border:1px solid rgba(37,99,235,0.15);    
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(0,0,0,0.12);
+}
+
+.progress-bar{
+height:8px;
+background:#e2e8f0;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-fill{
+height:8px;
+width:0;
+background:#2563eb;
+transition:1.5s;
+}
+
+ul{
+padding-left:20px;
+}
+
+/* Experience Link Style */
+#experience a{
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+transition:all 0.3s ease;
+display:inline-block;
+padding:8px 12px;
+border-radius:10px;
+}
+
+#experience a:hover{
+background:rgba(255,255,255,0.4);
+backdrop-filter:blur(8px);
+border:1px solid rgba(37,99,235,0.3);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+/* Contact Card Layout */
+.contact-card{
+display:flex;
+flex-direction:column;
+gap:6px;   /* ลดช่องว่างลง */
+}
+
+/* Contact Item Style */
+.contact-item{
+display:block;
+padding:12px 16px;
+border-radius:12px;
+text-decoration:none;
+color:#1e293b;
+font-weight:500;
+transition:all 0.3s ease;
+}
+
+/* Hover Effect */
+.contact-item:hover{
+background:rgba(37,99,235,0.08);
+border:1px solid rgba(37,99,235,0.25);
+box-shadow:0 12px 30px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.contact-item:hover{
+background:rgba(255,255,255,0.5);
+backdrop-filter:blur(10px);
+border:1px solid rgba(37,99,235,0.3);
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transform:translateY(-4px);
+}
+
+.social-row{
+display:flex;
+gap:10px;
+}
+
+.contact-item.small{
+flex:1;
+text-align:center;
+padding:10px 14px;
+}
+.contact-item.small:hover{
+transform:translateY(-3px);
+}
